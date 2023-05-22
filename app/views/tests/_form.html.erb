@@ -1,0 +1,47 @@
+<%= form_with(model: test, local: true) do |form| %>
+    <% if test.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(test.errors.count, "error") %> prohibited this test from being saved:</h2>
+  
+        <ul>
+          <% test.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.label :Назва%>
+      <%= form.text_field :title %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :Предмет %>
+      <%= form.text_field :subject %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :Час_початку %>
+      <%= form.datetime_field :time_start %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :Час_завершення %>
+      <%= form.datetime_field :time_finish %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :Обмеження_часу %>
+      <%= form.number_field :time_limit %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :Максимальна_оцінка %>
+      <%= form.number_field :max_grade %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>

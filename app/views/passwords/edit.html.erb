@@ -1,0 +1,20 @@
+
+<div style="max-width: 400px; margin: 0 auto;">
+  <h1 style="text-align: center; font-family: Arial, sans-serif; color: #333;">Зміна паролю</h1>
+
+  <form action="<%= edit_password_path %>" method="post">
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; font-weight: bold; color: #333;">Пароль:</label>
+      <input style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" type="password" name="current_user[password]">
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; font-weight: bold; color: #333;">Підтвердження паролю:</label>
+      <input style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" type="password" name="current_user[password_confirmation]">
+    </div>
+
+    <div style="text-align: center;">
+      <input style="padding: 12px 24px; font-weight: bold; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;" type="submit" value="Оновити">
+    </div>
+  </form>
+</div>

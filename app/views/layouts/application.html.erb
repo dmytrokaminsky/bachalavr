@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bachv3</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <nav style="background-color: pink; padding: 10px;">
+  <ul style="display: flex; list-style-type: none; justify-content: space-between; align-items: center;">
+    <li><%= link_to 'Головна ', root_path %></li>
+    <li><%= link_to 'Тести ', tests_path %></li>
+    <li><%= link_to 'Створити тест ', new_test_path %></li>
+    <li style="margin-left: auto;">
+      <% if Current.user %>
+        <span>Вхід здійсненно як: <%= Current.user.email %></span>
+        <div>
+          <%= link_to 'Змінити пароль', edit_password_path %>
+          <%= button_to 'Вихід', logout_path, method: :delete, class: 'logout-button' %>
+        </div>
+      <% else %>
+        <div>
+          <%= link_to 'Зареєструватись', sign_up_path %>
+          <span>або</span>
+          <%= link_to 'Увійти', sign_in_path %>
+        </div>
+      <% end %>
+    </li>
+  </ul>
+</nav>
+  <body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+</body>
+  </body>
+</html>

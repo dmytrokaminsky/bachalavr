@@ -1,0 +1,51 @@
+<h1 style="text-align: center; font-family: Arial, sans-serif;">Реєстрація нового користувача</h1>
+
+<form style="max-width: 400px; margin: 0 auto;" action="<%= sign_up_path %>" method="post">
+  <div style="margin-bottom: 10px;">
+    <label style="display: block; font-weight: bold;">Електронна адреса:</label>
+    <input style="width: 100%; padding: 5px;" type="email" name="user[email]">
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <label style="display: block; font-weight: bold;">Пароль:</label>
+    <input style="width: 100%; padding: 5px;" type="password" name="user[password]">
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <label style="display: block; font-weight: bold;">Підтвердження паролю:</label>
+    <input style="width: 100%; padding: 5px;" type="password" name="user[password_confirmation]">
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <label style="display: block; font-weight: bold;">Ім'я:</label>
+    <input style="width: 100%; padding: 5px;" type="text" name="user[name]">
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <label style="display: block; font-weight: bold;">Прізвище:</label>
+    <input style="width: 100%; padding: 5px;" type="text" name="user[surname]">
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <label style="display: block; font-weight: bold;">Група:</label>
+    <input style="width: 100%; padding: 5px;" type="text" name="user[group_id]">
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <label style="display: block; font-weight: bold;">Вік:</label>
+    <input style="width: 100%; padding: 5px;" type="text" name="user[age]">
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <label style="display: block; font-weight: bold;">Стать:</label>
+    <select style="width: 100%; padding: 5px;" name="user[sex]">
+      <option value="Жіноча">Жіноча</option>
+      <option value="Чоловіча">Чоловіча</option>
+      <option value="Не визначено">Не визначено</option>
+    </select>
+  </div>
+
+  <div style="text-align: center;">
+    <input style="padding: 10px 20px; font-weight: bold; background-color: #4CAF50; color: white; border: none; cursor: pointer;" type="submit" value="Зареєструватись">
+  </div>
+</form>

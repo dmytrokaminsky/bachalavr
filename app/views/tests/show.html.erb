@@ -1,0 +1,82 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #45a049;
+  }
+
+  .back-link {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+</style>
+
+<div class="container">
+  <p>
+    <strong>Назва:</strong>
+    <%= @test.title %>
+  </p>
+
+  <p>
+    <strong>Предмет:</strong>
+    <%= @test.subject %>
+  </p>
+
+  <p>
+    <strong>Час початку:</strong>
+    <%= @test.time_start %>
+  </p>
+
+  <p>
+    <strong>Час закінчення:</strong>
+    <%= @test.time_finish %>
+  </p>
+
+  <p>
+    <strong>Обмеження у часі:</strong>
+    <%= @test.time_limit %>
+  </p>
+
+  <p>
+    <strong>Максимальна оцінка:</strong>
+    <%= @test.max_grade %>
+  </p>
+
+  <%= link_to 'Редагувати', edit_test_path(@test), class: 'btn' %> |
+  <%= link_to 'Повернутись назад', tests_path, class: 'btn' %>
+
+  <a href="#" class="back-link">Повернутись назад</a>
+</div>

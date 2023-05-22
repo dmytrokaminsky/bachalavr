@@ -1,0 +1,20 @@
+<div style="max-width: 400px; margin: 0 auto;">
+  <h1 style="text-align: center; font-family: Arial, sans-serif;">Sign In</h1>
+
+  <form action="<%= sign_in_path %>" method="post">
+    <div style="margin-bottom: 10px;">
+      <label style="display: block; font-weight: bold;">Електронна пошта:</label>
+      <input style="width: 100%; padding: 5px;" type="email" name="email" id="email">
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label style="display: block; font-weight: bold;">Пароль:</label>
+      <input style="width: 100%; padding: 5px;" type="password" name="password" id="password">
+      <a style="font-size: 12px; text-decoration: none; color: #333;" href="<%= password_reset_path %>">Забули пароль?</a>
+    </div>
+
+    <div style="text-align: center;">
+      <input style="padding: 10px 20px; font-weight: bold; background-color: #4CAF50; color: white; border: none; cursor: pointer;" type="submit" value="Увійти">
+    </div>
+  </form>
+</div>
